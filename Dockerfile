@@ -13,3 +13,4 @@ ARG CONTAINERVERSION=rainbow
 ENV CONTAINERVERSION=$CONTAINERVERSION
 # Site contents
 COPY . /var/www/html/
+CMD /usr/sbin/apache2ctl -D FOREGROUND
