@@ -1,15 +1,15 @@
 FROM leynebe/openshift-webserver:latest
 
-# Permissions
+# Set apache user permissions
 RUN chown -R 100:0 /app/ && \
     chmod -R g=u /app/
 
 # Be Apache user
 USER 100
 
-# Environment vars
+# Set environment vars
 ARG CONTAINERVERSION=rainbow
 ENV CONTAINERVERSION=$CONTAINERVERSION
 
-# Site contents
+# Copy over site files
 COPY . /app/
