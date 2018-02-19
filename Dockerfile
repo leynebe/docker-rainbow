@@ -7,6 +7,8 @@ RUN chgrp -R 0 /var/ && \
     chmod -R g=u /var/
 # Site contents
 COPY . /var/www/html/
+# User
+USER 1001
 # Environment vars
 ARG CONTAINERVERSION=rainbow
 ENV CONTAINERVERSION=$CONTAINERVERSION
