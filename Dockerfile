@@ -6,8 +6,7 @@ RUN echo "Listen 8080" > /etc/apache2/ports.conf && \
 
 EXPOSE 8080
 
-COPY index.php /var/www/html/index.php
-COPY style.php /var/www/html/style.php
+COPY . /var/www/html/
 
 ARG CONTAINERVERSION=rainbow
 ENV CONTAINERVERSION=$CONTAINERVERSION
