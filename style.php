@@ -22,8 +22,8 @@ body{
 }
 
 .box{
-	/* First 3 hex digits from the container's hostname make up the color of the application. */
-	background:#" .  substr(gethostname(), 0, 3)  . ";
+	/* Last 3 hex digits from the container's hostname make up the color of the application. */
+	background:#" .  substr(bin2hex(gethostname()), -3)  . ";
 	color:white;
 	text-align:center;
 	border-radius:10px;
