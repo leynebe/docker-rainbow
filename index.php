@@ -7,6 +7,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="style.php">
 </head>
 <body>
-<div class="box"><h1><?php echo getenv('CONTAINERVERSION'); ?></h1><h2>Hostname: <?php echo gethostname(); ?></h2></div>
+<div class="box"><h1><?php echo getenv('APPLICATION_NAME'); ?></h1><h2>Hostname: <?php echo gethostname(); ?></h2></div>
 </body>
 </html>

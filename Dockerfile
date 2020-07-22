@@ -1,8 +1,7 @@
 FROM leynebe/openshift-webserver:latest
 
 # Set environment vars
-ARG CONTAINERVERSION=rainbow
-ENV CONTAINERVERSION=$CONTAINERVERSION
+ENV APPLICATION_NAME=rainbow
 
 # Copy over site files
 COPY . /app/
