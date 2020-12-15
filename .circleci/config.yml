@@ -10,11 +10,6 @@ jobs:
       - checkout
       # If I needed to compile/build php or install composer packages this is where we should do it.
       - run: php --version
-      # Test env vars
-      # From project env 
-      - run: echo $BORKMEISTER
-      # From context env
-      - run: echo $BORKMEISTER2
       # Allow us to use docker-in-docker
       - setup_remote_docker:
           version: 19.03.13
