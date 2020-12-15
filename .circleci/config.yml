@@ -1,8 +1,6 @@
 version: 2.1
 jobs:
   build-and-push:
-    context:
-      - docker_hub_leynebe_context
     docker:
       - image: circleci/php:8.0.0-cli-buster
         auth: 
@@ -29,5 +27,7 @@ jobs:
 workflows:
   main:
     jobs:
-      - build-and-push
+      - build-and-push:
+          context:
+            - docker_hub_leynebe_context
 
