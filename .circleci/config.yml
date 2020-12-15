@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/php:8.0.0-cli-buster
         auth: 
-          username: leynebe
+          username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
