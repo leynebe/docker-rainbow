@@ -32,10 +32,11 @@ jobs:
       - docker/check:
           docker-username: DOCKERHUB_USERNAME  
           docker-password: DOCKERHUB_PASSWORD 
+      # Build the image
       - docker/build:
-          lint-dockerfile: true
           image: leynebe/circleci-docker-rainbow
           tag: 0.0.$CIRCLE_BUILD_NUM,latest
+      # Push the image
       - docker/push:
           image: leynebe/circleci-docker-rainbow:0.0.$CIRCLE_BUILD_NUM
       - docker/push:
